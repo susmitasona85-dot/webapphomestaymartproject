@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 95 1% 98%;
+  --foreground: 146 2% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 146 2% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 146 2% 20%;
+  --primary: 146 7% 36%;
+  --primary-foreground: 95 1% 98%;
+  --secondary: 95 3% 90%;
+  --secondary-foreground: 146 7% 36%;
+  --muted: 95 2% 92%;
+  --muted-foreground: 146 2% 40%;
+  --accent: 146 7% 36%;
+  --accent-foreground: 146 7% 36%;
+  --destructive: 27 24% 57%;
+  --border: 95 2% 85%;
+  --input: 95 2% 85%;
+  --ring: 146 7% 36%;
+  --radius: 0.75rem;
+
+  /* Additional custom colors */
+  --earth-brown: 60 5% 45%;
+}
+
+.dark {
+  --background: 146 2% 15%;
+  --foreground: 95 1% 98%;
+  --card: 146 2% 18%;
+  --card-foreground: 95 1% 98%;
+  --popover: 146 2% 18%;
+  --popover-foreground: 95 1% 98%;
+  --primary: 146 7% 45%;
+  --primary-foreground: 146 2% 15%;
+  --secondary: 146 2% 25%;
+  --secondary-foreground: 95 1% 98%;
+  --muted: 146 2% 25%;
+  --muted-foreground: 146 2% 70%;
+  --accent: 146 7% 45%;
+  --accent-foreground: 95 1% 98%;
+  --destructive: 22 19% 70%;
+  --border: 146 2% 30%;
+  --input: 146 2% 30%;
+  --ring: 146 7% 45%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
